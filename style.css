@@ -1,0 +1,79 @@
+:root{
+  --bg:#fff;
+  --fg:#0a0a0a;
+  --muted:#737373;
+  --line:#dedede;
+  --soft:#f5f5f5;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:50;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{height:82px;max-width:var(--max);margin:auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.logo{font-weight:800;letter-spacing:-.05em;font-size:19px}.logo span{font-size:24px}
+.nav nav{display:flex;gap:34px;font-size:13px;color:#555}
+.nav nav a:hover,.socials a:hover,.nav-cta:hover{color:#000}
+.nav-cta{font-size:13px;border-bottom:1px solid #111;padding-bottom:4px}
+.hero{max-width:var(--max);margin:auto;padding:145px 30px 70px;min-height:calc(100vh - 82px);display:flex;flex-direction:column;justify-content:center}
+.hero-kicker,.section-label{font-size:11px;font-weight:700;letter-spacing:.16em;color:#666}
+.hero-kicker span{display:inline-block;width:7px;height:7px;background:#111;border-radius:50%;margin-right:10px}
+h1{font-size:clamp(58px,9vw,132px);line-height:.9;letter-spacing:-.075em;font-weight:700;margin:28px 0 38px;max-width:1100px}
+h1 em,h2 em{font-style:normal;color:#777}
+.hero-copy{max-width:610px;color:#555;font-size:17px;line-height:1.7}
+.hero-copy strong{color:#111}
+.hero-actions{display:flex;gap:12px;margin-top:36px}
+.button{padding:14px 20px;font-size:13px;font-weight:600;border:1px solid #111;transition:.25s}
+.button.primary{background:#111;color:#fff}.button.primary:hover{background:#333}
+.button.ghost:hover{background:#f3f3f3}
+.hero-meta{display:flex;gap:35px;margin-top:70px;padding-top:18px;border-top:1px solid var(--line);font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.08em}
+.section{max-width:var(--max);margin:auto;padding:130px 30px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:55px}
+h2{font-size:clamp(44px,6vw,82px);line-height:.95;letter-spacing:-.065em}
+.about-text{max-width:500px;color:#555;font-size:16px}
+.about-text p+p{margin-top:22px}
+.text-link{display:inline-block;margin-top:35px;color:#111;border-bottom:1px solid #111;padding-bottom:4px;font-size:13px}
+.projects{margin-top:55px;border-top:1px solid #111}
+.project{display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--line);padding:42px 0}
+.project-number{font-size:12px;color:#999}
+.project-info{max-width:850px}
+.project-top{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.13em;color:#888}
+.project h3{font-size:clamp(35px,5vw,65px);letter-spacing:-.06em;margin:22px 0 12px}
+.project p{color:#666;max-width:600px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.tags span{border:1px solid var(--line);padding:6px 10px;font-size:10px;color:#666}
+.project-info>a{font-size:12px;font-weight:600;border-bottom:1px solid #111;padding-bottom:3px}
+.skills-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin:55px 0}
+.skills-head p{max-width:450px;color:#666}
+.skill-list{border-top:1px solid #111}
+.skill-list div{display:grid;grid-template-columns:60px 1fr 1.5fr;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+.skill-list b{font-size:10px;color:#aaa}.skill-list span{font-size:13px;color:#777}.skill-list strong{font-size:14px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #111;border-bottom:1px solid #111;padding-top:50px;padding-bottom:50px}
+.stats>div{padding-left:30px;border-left:1px solid var(--line);font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.08em}
+.stats>div:first-child{padding-left:0;border-left:0}
+.stat-num{font-size:clamp(55px,7vw,90px);font-weight:600;letter-spacing:-.07em;color:#111;line-height:1;margin-bottom:10px}
+.contact{background:#0a0a0a;color:#fff;padding:125px 30px}
+.contact .section-label{color:#777;max-width:var(--max);margin:auto}
+.contact-inner{max-width:var(--max);margin:60px auto 0}
+.contact-inner>p{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:.14em}
+.contact h2{font-size:clamp(65px,10vw,140px);margin:22px 0 50px}
+.contact-email{font-size:clamp(18px,3vw,30px);border-bottom:1px solid #555;padding-bottom:7px}
+.socials{display:flex;gap:25px;margin-top:65px;font-size:12px;color:#aaa}.socials a:hover{color:#fff}
+footer{background:#0a0a0a;color:#666;border-top:1px solid #292929;max-width:none;padding:24px 30px;display:flex;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+footer a{color:#aaa}
+.cursor{display:none}
+@media (min-width:900px){
+  body{cursor:none}.cursor{display:block;width:9px;height:9px;background:#111;border-radius:50%;position:fixed;z-index:100;pointer-events:none;transform:translate(-50%,-50%);transition:transform .08s ease}
+}
+@media(max-width:700px){
+  .nav{height:70px;padding:0 20px}.nav nav{display:none}.nav-cta{font-size:11px}
+  .hero{padding:100px 20px 50px;min-height:auto}.hero h1{font-size:16vw;margin:25px 0}
+  .hero-copy{font-size:15px}.hero-meta{display:grid;grid-template-columns:1fr;gap:10px;margin-top:50px}
+  .section{padding:85px 20px}.about-grid,.skills-head{grid-template-columns:1fr;gap:35px;margin-top:40px}
+  .project{grid-template-columns:45px 1fr;padding:32px 0}.project h3{font-size:42px}
+  .skill-list div{grid-template-columns:40px 1fr}.skill-list strong{grid-column:2;margin-top:7px}
+  .stats{grid-template-columns:1fr;gap:30px;padding:40px 0}.stats>div{padding:0;border:0}
+  .contact{padding:90px 20px}.contact-inner{margin-top:45px}.contact h2{font-size:17vw}
+  footer{padding:22px 20px;display:grid;gap:10px}
+}
